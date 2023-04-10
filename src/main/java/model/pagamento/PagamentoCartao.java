@@ -6,9 +6,9 @@ public class PagamentoCartao extends Pagamento {
     private String nmCartao;
     private String nomeTitular;
     private Date dataValidade;
-    private String codigoSeguranca;
+    private Integer codigoSeguranca;
 
-    public PagamentoCartao(double valor, Date data, int numeroPedido, StatusPagamento status, String nmCartao, String nomeTitular, Date dataValidade, String codigoSeguranca) {
+    public PagamentoCartao(double valor, Date data, StatusPagamento status, String nmCartao, String nomeTitular, Date dataValidade, Integer codigoSeguranca) {
         super(valor, data, status);
         this.nmCartao = nmCartao;
         this.nomeTitular = nomeTitular;
@@ -40,12 +40,17 @@ public class PagamentoCartao extends Pagamento {
         this.dataValidade = dataValidade;
     }
 
-    public String getCodigoSeguranca() {
+    public Integer getCodigoSeguranca() {
         return codigoSeguranca;
     }
 
-    public void setCodigoSeguranca(String codigoSeguranca) {
+    public void setCodigoSeguranca(Integer codigoSeguranca) {
         this.codigoSeguranca = codigoSeguranca;
+    }
+
+    @Override
+    public void processarPagamento() {
+        super.processarPagamento();
     }
 
     @Override

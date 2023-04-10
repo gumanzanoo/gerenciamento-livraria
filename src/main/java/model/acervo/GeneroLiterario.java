@@ -1,4 +1,4 @@
-package model;
+package model.acervo;
 
 public class GeneroLiterario {
     private String titulo;

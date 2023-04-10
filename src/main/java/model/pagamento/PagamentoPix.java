@@ -42,6 +42,16 @@ public class PagamentoPix extends Pagamento {
 
     @Override
     public void processarPagamento() {
+        super.processarPagamento();
+    }
+
+    @Override
+    public String toString() {
+        return "PagamentoPix{" +
+                "chavePix='" + chavePix + '\'' +
+                ", tipoChavePix=" + tipoChavePix +
+                ", instituicaoFinanceira='" + instituicaoFinanceira + '\'' +
+                '}';
     }
 }
 

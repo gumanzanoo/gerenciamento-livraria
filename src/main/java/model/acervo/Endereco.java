@@ -1,4 +1,4 @@
-package model;
+package model.acervo;
 
 public class Endereco {
     private int numero;
@@ -69,13 +69,11 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereco{" +
-                "numero=" + numero +
-                ", bairro='" + bairro + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", estado='" + estado + '\'' +
-                ", pais='" + pais + '\'' +
-                ", cep='" + cep + '\'' +
-                '}';
+        return "numero: " + numero + '\n' +
+               "bairro: " + bairro + '\n' +
+               "cidade: " + cidade + '\n' +
+               "estado: " + estado + '\n' +
+               "pais: " + pais + '\n' +
+               "cep: " + cep + '\n';
     }
 }

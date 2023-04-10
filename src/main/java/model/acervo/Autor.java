@@ -1,6 +1,5 @@
-package model;
+package model.acervo;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 public class Autor {
