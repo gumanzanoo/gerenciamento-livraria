@@ -69,11 +69,11 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "numero: " + numero + '\n' +
-               "bairro: " + bairro + '\n' +
-               "cidade: " + cidade + '\n' +
-               "estado: " + estado + '\n' +
-               "pais: " + pais + '\n' +
-               "cep: " + cep + '\n';
+        return "Numero: " + getNumero() + '\n' +
+               "Bairro: " + getBairro() + '\n' +
+               "Cidade: " + getCidade() + '\n' +
+               "Estado: " + getEstado() + '\n' +
+               "Pais: " + getPais() + '\n' +
+               "CEP: " + getCep() + '\n';
     }
 }

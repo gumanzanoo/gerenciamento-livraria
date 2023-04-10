@@ -7,15 +7,18 @@ public class Cliente {
     private String sobrenome;
     private String email;
     private String telefone;
+    private String cpf;
     private Endereco endereco;
 
-    public Cliente() {}
+    public Cliente() {
+    }
 
-    public Cliente(String nome, String sobrenome, String email, String telefone, Endereco endereco) {
+    public Cliente(String nome, String sobrenome, String email, String telefone, String cpf, Endereco endereco) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.telefone = telefone;
+        this.cpf = cpf;
         this.endereco = endereco;
     }
 
@@ -51,6 +54,10 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public String getCpf() { return cpf; }
+
+    public void setCpf(String cpf) { this.cpf = cpf; }
+
     public Endereco getEndereco() {
         return endereco;
     }
@@ -61,12 +68,10 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", email='" + email + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", endereco=" + endereco +
-                '}';
+        return "Nome: " + getNome() + '\n' +
+                "Sobrenome: " + getSobrenome() + '\n' +
+                "Email: " + getEmail() + '\n' +
+                "Telefone: " + getTelefone() + '\n' +
+                '\n' + "Endereco: " + '\n' + getEndereco();
     }
 }
