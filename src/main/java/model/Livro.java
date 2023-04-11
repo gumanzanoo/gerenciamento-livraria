@@ -1,19 +1,21 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.Locale;
 
 public class Livro {
     private String titulo;
     private Integer nmPaginas;
     private Integer qtdEstoque;
     private double precoVenda;
-    private Date dataLancamento;
+    private LocalDate dataLancamento;
     private Autor autor;
     private GeneroLiterario generoLiterario;
 
     public Livro() {}
 
-    public Livro(String titulo, Integer nmPaginas, Integer qtdEstoque, double precoVenda, Date dataLancamento, Autor autor, GeneroLiterario generoLiterario) {
+    public Livro(String titulo, Integer nmPaginas, Integer qtdEstoque, double precoVenda, LocalDate dataLancamento, Autor autor, GeneroLiterario generoLiterario) {
         this.titulo = titulo;
         this.nmPaginas = nmPaginas;
         this.qtdEstoque = qtdEstoque;
@@ -55,11 +57,11 @@ public class Livro {
         this.precoVenda = precoVenda;
     }
 
-    public Date getDataLancamento() {
+    public LocalDate getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

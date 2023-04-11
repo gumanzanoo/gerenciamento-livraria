@@ -1,4 +1,4 @@
-package domain;
+package domain.venda;
 
 public class Venda {
 }
