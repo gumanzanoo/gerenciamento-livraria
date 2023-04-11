@@ -1,4 +1,4 @@
-package model.acervo;
+package model;
 
 public class Endereco {
     private int numero;

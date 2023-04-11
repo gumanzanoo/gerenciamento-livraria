@@ -1,9 +1,10 @@
 package livraria;
 
-import domain.Cadastro;
+import domain.cadastro.Cadastro;
+import model.Cliente;
 
 public class Main {
     public static void main(String[] args) {
-        Cadastro.CadastroGeral();
+        Cliente cliente = Cadastro.Cliente();
     }
 }

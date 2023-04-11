@@ -1,4 +1,4 @@
-package model.pagamento;
+package model;
 
 public enum TipoChavePix {
     CPF, CELULAR, EMAIL, ALEATORIA;

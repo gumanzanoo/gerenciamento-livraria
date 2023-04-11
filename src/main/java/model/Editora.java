@@ -1,4 +1,4 @@
-package model.acervo;
+package model;
 
 public class Editora {
     private String razaoSocial;

@@ -1,6 +1,6 @@
-package model.cliente;
+package model;
 
-import model.acervo.Endereco;
+import model.Endereco;
 
 public class Cliente {
     private String nome;

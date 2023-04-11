@@ -1,4 +1,4 @@
-package model.acervo;
+package model;
 
 import java.util.Date;
 
