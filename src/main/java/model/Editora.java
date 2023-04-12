@@ -40,7 +40,7 @@ public class Editora {
     @Override
     public String toString() {
         return "Editora{" +
-                "razaoSocial='" + razaoSocial + '\'' +
+                "razaoSocial='" + nome + '\'' +
                 ", cnpj='" + cnpj + '\'' +
                 ", endereco=" + endereco +
                 '}';

@@ -2,10 +2,10 @@ package livraria;
 
 import model.*;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-
-
         Endereco enderecoCliente = new Endereco();
         enderecoCliente.setNumero(3592);
         enderecoCliente.setRua("Almirante Barroso");
@@ -45,14 +45,41 @@ public class Main {
         editora.setCnpj("19.868.501/0001-12");
         editora.setEndereco(enderecoEditora);
 
-        Livro livro = new Livro();
-        livro.setTitulo("Memórias póstumas de Brás Cubas");
-        livro.setNmPaginas(320);
-        livro.setQtdEstoque(22);
-        livro.setPrecoVenda(14.00);
-        livro.setDataLancamento("01/01/1881");
-        livro.setAutor(autor);
-        livro.setGeneroLiterario(generoLiterario);
-        livro.setEditora(editora);
+        Livro livro1 = new Livro();
+        livro1.setTitulo("Memórias póstumas de Brás Cubas");
+        livro1.setNmPaginas(320);
+        livro1.setQtdEstoque(22);
+        livro1.setPrecoVenda(14.00);
+        livro1.setDataLancamento("01/01/1881");
+        livro1.setAutor(autor);
+        livro1.setGeneroLiterario(generoLiterario);
+        livro1.setEditora(editora);
+
+        Livro livro2 = new Livro();
+        livro2.setTitulo("Dom Casmurro");
+        livro2.setNmPaginas(210);
+        livro2.setQtdEstoque(9);
+        livro2.setPrecoVenda(12.00);
+        livro2.setDataLancamento("01/01/1899");
+        livro2.setAutor(autor);
+        livro2.setGeneroLiterario(generoLiterario);
+        livro2.setEditora(editora);
+
+        Livro livro3 = new Livro();
+        livro1.setTitulo("O Alienista");
+        livro1.setNmPaginas(100);
+        livro1.setQtdEstoque(12);
+        livro1.setPrecoVenda(16.00);
+        livro1.setDataLancamento("15/03/1882");
+        livro1.setAutor(autor);
+        livro1.setGeneroLiterario(generoLiterario);
+        livro1.setEditora(editora);
+
+        ArrayList<Livro> livros = new ArrayList<>();
+        livros.add(livro1);
+        livros.add(livro2);
+        livros.add(livro3);
+
+
     }
 }

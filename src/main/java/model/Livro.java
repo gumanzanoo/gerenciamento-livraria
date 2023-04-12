@@ -93,8 +93,9 @@ public class Livro {
                 ", nmPaginas=" + nmPaginas +
                 ", qtdEstoque=" + qtdEstoque +
                 ", precoVenda=" + precoVenda +
-                ", dataLancamento=" + dataLancamento +
+                ", dataLancamento='" + dataLancamento + '\'' +
                 ", autor=" + autor +
+                ", editora=" + editora +
                 ", generoLiterario=" + generoLiterario +
                 '}';
     }
