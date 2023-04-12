@@ -1,24 +1,24 @@
 package model;
 
 public class Editora {
-    private String razaoSocial;
+    private String nome;
     private String cnpj;
     private Endereco endereco;
 
     public Editora () {}
 
-    public Editora(String razaoSocial, String cnpj, Endereco endereco) {
-        this.razaoSocial = razaoSocial;
+    public Editora(String nome, String cnpj, Endereco endereco) {
+        this.nome = nome;
         this.cnpj = cnpj;
         this.endereco = endereco;
     }
 
     public String getRazaoSocial() {
-        return razaoSocial;
+        return nome;
     }
 
     public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+        this.nome = razaoSocial;
     }
 
     public String getCnpj() {

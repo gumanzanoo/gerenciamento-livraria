@@ -4,7 +4,6 @@ import model.Endereco;
 
 public class Cliente {
     private String nome;
-    private String sobrenome;
     private String email;
     private String telefone;
     private String cpf;
@@ -13,9 +12,8 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String nome, String sobrenome, String email, String telefone, String cpf, Endereco endereco) {
+    public Cliente(String nome, String email, String telefone, String cpf, Endereco endereco) {
         this.nome = nome;
-        this.sobrenome = sobrenome;
         this.email = email;
         this.telefone = telefone;
         this.cpf = cpf;
@@ -28,14 +26,6 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
     }
 
     public String getEmail() {
@@ -69,7 +59,6 @@ public class Cliente {
     @Override
     public String toString() {
         return "Nome: " + getNome() + '\n' +
-                "Sobrenome: " + getSobrenome() + '\n' +
                 "Email: " + getEmail() + '\n' +
                 "Telefone: " + getTelefone() + '\n' +
                 '\n' + "Endereco: " + '\n' + getEndereco();

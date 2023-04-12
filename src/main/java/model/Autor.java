@@ -4,17 +4,15 @@ import java.util.Date;
 
 public class Autor {
     private String nome;
-    private String sobrenome;
-    private Date dtNascimento;
-    private Date dtFalecimento;
+    private String dtNascimento;
+    private String dtFalecimento;
     private String nacionalidade;
     private GeneroLiterario generoLiterario;
 
     public Autor () {}
 
-    public Autor(String nome, String sobrenome, Date dtNascimento, Date dtFalecimento, String nacionalidade, GeneroLiterario generoLiterario) {
+    public Autor(String nome, String dtNascimento, String dtFalecimento, String nacionalidade, GeneroLiterario generoLiterario) {
         this.nome = nome;
-        this.sobrenome = sobrenome;
         this.dtNascimento = dtNascimento;
         this.dtFalecimento = dtFalecimento;
         this.nacionalidade = nacionalidade;
@@ -29,27 +27,19 @@ public class Autor {
         this.nome = nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public Date getDtNascimento() {
+    public String getDtNascimento() {
         return dtNascimento;
     }
 
-    public void setDtNascimento(Date dtNascimento) {
+    public void setDtNascimento(String dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 
-    public Date getDtFalecimento() {
+    public String getDtFalecimento() {
         return dtFalecimento;
     }
 
-    public void setDtFalecimento(Date dtFalecimento) {
+    public void setDtFalecimento(String dtFalecimento) {
         this.dtFalecimento = dtFalecimento;
     }
 
@@ -73,7 +63,6 @@ public class Autor {
     public String toString() {
         return "Autor{" +
                 "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
                 ", dtNascimento=" + dtNascimento +
                 ", dtFalecimento=" + dtFalecimento +
                 ", nacionalidade='" + nacionalidade + '\'' +

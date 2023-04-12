@@ -9,19 +9,22 @@ public class Livro {
     private Integer nmPaginas;
     private Integer qtdEstoque;
     private double precoVenda;
-    private LocalDate dataLancamento;
+    private String dataLancamento;
     private Autor autor;
+    private Editora editora;
     private GeneroLiterario generoLiterario;
 
     public Livro() {}
 
-    public Livro(String titulo, Integer nmPaginas, Integer qtdEstoque, double precoVenda, LocalDate dataLancamento, Autor autor, GeneroLiterario generoLiterario) {
+    public Livro(String titulo, Integer nmPaginas, Integer qtdEstoque, double precoVenda,
+                 String dataLancamento, Autor autor, Editora editora, GeneroLiterario generoLiterario) {
         this.titulo = titulo;
         this.nmPaginas = nmPaginas;
         this.qtdEstoque = qtdEstoque;
         this.precoVenda = precoVenda;
         this.dataLancamento = dataLancamento;
         this.autor = autor;
+        this.editora = editora;
         this.generoLiterario = generoLiterario;
     }
 
@@ -57,11 +60,11 @@ public class Livro {
         this.precoVenda = precoVenda;
     }
 
-    public LocalDate getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(LocalDate dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
@@ -69,9 +72,11 @@ public class Livro {
         return autor;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
-    }
+    public void setAutor(Autor autor) { this.autor = autor; }
+
+    public Editora getEditora() { return editora; }
+
+    public void setEditora(Editora editora) { this.editora = editora; }
 
     public GeneroLiterario getGeneroLiterario() {
         return generoLiterario;
