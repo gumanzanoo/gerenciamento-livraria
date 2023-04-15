@@ -39,7 +39,7 @@ public class Pedido {
     
     public void setValorTotal(ArrayList<Livro> livros) { 
         double valorTotal = 0;
-        for(Livro livro : livros ){
+        for(Livro livro : livros ) {
             valorTotal += livro.getPrecoVenda();    
         }
         this.valorTotal = valorTotal;

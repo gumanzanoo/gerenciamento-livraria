@@ -1,0 +1,14 @@
+# Arquivos gerados pelo Maven
+target/
+
+# Arquivos de configuração do Eclipse
+.classpath
+.project
+.settings/
+
+# Logs do sistema
+log/
+*.log
+
+# Arquivos de backup
+*~
