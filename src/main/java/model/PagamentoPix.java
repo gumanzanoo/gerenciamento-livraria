@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Date;
 
 public class PagamentoPix extends Pagamento {
     private String chavePix;

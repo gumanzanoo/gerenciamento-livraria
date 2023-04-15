@@ -28,6 +28,7 @@ public class Main {
         cliente.setNome("Gustavo Manzano");
         cliente.setEmail("gustavomanzanoluiz@hotmail.com");
         cliente.setTelefone("(45) 9.9831-7784");
+        cliente.setCpf("078.668.897-11");
         cliente.setEndereco(enderecoCliente);
 
         GeneroLiterario generoLiterario = new GeneroLiterario();
@@ -79,7 +80,21 @@ public class Main {
         livros.add(livro1);
         livros.add(livro2);
         livros.add(livro3);
+        
+        PagamentoCartao pagamentoCartao = new PagamentoCartao();
+        pagamentoCartao.setNmCartao("2548-1154-1418-5485");
+        pagamentoCartao.setNomeTitular("Pedro Augusto");
+        pagamentoCartao.setDataValidade("09/03/2024");
+        pagamentoCartao.setCodigoSeguranca(777);
+        pagamentoCartao.setValor(42.00);
+        pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
-
+        PagamentoPix pagamentoPix = new PagamentoPix();
+        pagamentoPix.setChavePix("64.322.292/0001-61");
+        pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
+        pagamentoPix.setInstituicaoFinanceira("Itáu");
+        pagamentoPix.setValor(42.00);
+        pagamentoPix.setData("15/04;2023");
+        pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
     }
 }

@@ -4,12 +4,12 @@ import java.util.Date;
 
 public abstract class Pagamento {
     private double valor;
-    private Date data;
+    private String data;
     private StatusPagamento statusPagamento;
 
     public Pagamento() {}
 
-    public Pagamento(double valor, Date data, StatusPagamento statusPagamento) {
+    public Pagamento(double valor, String data, StatusPagamento statusPagamento) {
         this.valor = valor;
         this.data = data;
         this.statusPagamento = statusPagamento;
@@ -23,11 +23,11 @@ public abstract class Pagamento {
         this.valor = valor;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

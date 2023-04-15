@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Date;
 
 public class PagamentoCartao extends Pagamento {
     private String nmCartao;
