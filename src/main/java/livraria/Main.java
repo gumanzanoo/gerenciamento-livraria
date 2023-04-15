@@ -4,7 +4,6 @@ import model.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,13 +17,13 @@ public class Main {
         enderecoCliente.setCep("93233-983");
 
         Endereco enderecoEditora = new Endereco();
-        enderecoCliente.setNumero(182);
-        enderecoCliente.setRua("Av. São Luís");
-        enderecoCliente.setBairro("República");
-        enderecoCliente.setCidade("São Paulo");
-        enderecoCliente.setEstado("São Paulo");
-        enderecoCliente.setPais("Brasil");
-        enderecoCliente.setCep("01046-000");
+        enderecoEditora.setNumero(182);
+        enderecoEditora.setRua("Av. São Luís");
+        enderecoEditora.setBairro("República");
+        enderecoEditora.setCidade("São Paulo");
+        enderecoEditora.setEstado("São Paulo");
+        enderecoEditora.setPais("Brasil");
+        enderecoEditora.setCep("01046-000");
 
         Cliente cliente = new Cliente();
         cliente.setNome("Gustavo Manzano");
@@ -35,7 +34,8 @@ public class Main {
 
         GeneroLiterario generoLiterario = new GeneroLiterario();
         generoLiterario.setTitulo("Romance");
-        generoLiterario.setDescricao("Romance é um gênero textual que consiste em uma narrativa longa, escrita em prosa.");
+        generoLiterario.setDescricao("Romance é um gênero textual que"
+                + " consiste em uma narrativa longa, escrita em prosa.");
 
         Autor autor = new Autor();
         autor.setNome("Machado De Assis");
@@ -69,14 +69,14 @@ public class Main {
         livro2.setEditora(editora);
 
         Livro livro3 = new Livro();
-        livro1.setTitulo("O Alienista");
-        livro1.setNmPaginas(100);
-        livro1.setQtdEstoque(12);
-        livro1.setPrecoVenda(16.00);
-        livro1.setDataLancamento("15/03/1882");
-        livro1.setAutor(autor);
-        livro1.setGeneroLiterario(generoLiterario);
-        livro1.setEditora(editora);
+        livro3.setTitulo("O Alienista");
+        livro3.setNmPaginas(100);
+        livro3.setQtdEstoque(12);
+        livro3.setPrecoVenda(16.00);
+        livro3.setDataLancamento("15/03/1882");
+        livro3.setAutor(autor);
+        livro3.setGeneroLiterario(generoLiterario);
+        livro3.setEditora(editora);
 
         ArrayList<Livro> livros = new ArrayList<>();
         livros.add(livro1);
