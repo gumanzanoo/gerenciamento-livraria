@@ -38,9 +38,7 @@ public abstract class Pagamento {
     public void setStatusPagamento(StatusPagamento statusPagamento) {
         this.statusPagamento = statusPagamento;
     }
-
-    public void processarPagamento() {}
-
+    
     @Override
     public String toString() {
         return "Pagamento{" +

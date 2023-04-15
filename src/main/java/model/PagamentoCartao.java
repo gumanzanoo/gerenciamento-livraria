@@ -52,11 +52,6 @@ public class PagamentoCartao extends Pagamento {
     }
 
     @Override
-    public void processarPagamento() {
-        super.processarPagamento();
-    }
-
-    @Override
     public String toString() {
         return "PagamentoCartao{" +
                 "nmCartao='" + nmCartao + '\'' +
