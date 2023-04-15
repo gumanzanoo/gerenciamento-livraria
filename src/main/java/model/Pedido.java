@@ -35,9 +35,15 @@ public class Pedido {
         this.livro = livro;
     }
 
-    public Double getValorTotal() { return valorTotal; }
-
-    public void setValorTotal(Double valorTotal) { this.valorTotal = valorTotal; }
+    public Double getValorTotal() { return valorTotal; }    
+    
+    public void setValorTotal(ArrayList<Livro> livros) { 
+        double valorTotal = 0;
+        for(Livro livro : livros ){
+            valorTotal += livro.getPrecoVenda();    
+        }
+        this.valorTotal = valorTotal;
+    }
 
     public String getData() {
         return data;

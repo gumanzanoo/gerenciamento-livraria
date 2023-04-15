@@ -1,8 +1,8 @@
 model\Autor.class
+model\Endereco.class
+model\Pedido.class
 model\GeneroLiterario.class
 model\StatusPagamento.class
 model\Cliente.class
-model\Editora.class
-model\Endereco.class
-model\Pedido.class
 model\Livro.class
+model\Editora.class

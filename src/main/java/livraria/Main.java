@@ -82,17 +82,12 @@ public class Main {
         livros.add(livro1);
         livros.add(livro2);
         livros.add(livro3);
-
-        double valorTotal = 0;
-        for (Livro livro : livros) {
-            valorTotal += livro.getPrecoVenda();
-        }
         
         Pedido pedido = new Pedido();
         pedido.setCliente(cliente);
         pedido.setLivro(livros);
         pedido.setData(LocalDate.now().toString());
-        pedido.setValorTotal(valorTotal);
+        pedido.setValorTotal(livros);
 
         PagamentoCartao pagamentoCartao = new PagamentoCartao();
         pagamentoCartao.setNmCartao("2548-1154-1418-5485");
