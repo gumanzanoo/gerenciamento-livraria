@@ -1,15 +1,18 @@
 package model;
 
+import java.sql.Array;
+import java.util.ArrayList;
+
 public class Venda {
     private Cliente cliente;
     private Pedido pedido;
-    private Pagamento pagamento;
+    private ArrayList<Pagamento> pagamento;
     private String data;
 
     public Venda() {
     }
 
-    public Venda(Cliente cliente, Pedido pedido, Pagamento pagamento, String data) {
+    public Venda(Cliente cliente, Pedido pedido, ArrayList<Pagamento> pagamento, String data) {
         this.cliente = cliente;
         this.pedido = pedido;
         this.pagamento = pagamento;
@@ -32,11 +35,11 @@ public class Venda {
         this.pedido = pedido;
     }
 
-    public Pagamento getPagamento() {
+    public ArrayList<Pagamento> getPagamento() {
         return pagamento;
     }
 
-    public void setPagamento(Pagamento pagamento) {
+    public void setPagamento(ArrayList<Pagamento> pagamento) {
         this.pagamento = pagamento;
     }
 

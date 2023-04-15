@@ -2,7 +2,9 @@ package livraria;
 
 import model.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -80,13 +82,25 @@ public class Main {
         livros.add(livro1);
         livros.add(livro2);
         livros.add(livro3);
+
+        double valorTotal = 0;
+        for (Livro livro : livros) {
+            valorTotal += livro.getPrecoVenda();
+        }
         
+        Pedido pedido = new Pedido();
+        pedido.setCliente(cliente);
+        pedido.setLivro(livros);
+        pedido.setData(LocalDate.now().toString());
+        pedido.setValorTotal(valorTotal);
+
         PagamentoCartao pagamentoCartao = new PagamentoCartao();
         pagamentoCartao.setNmCartao("2548-1154-1418-5485");
         pagamentoCartao.setNomeTitular("Pedro Augusto");
         pagamentoCartao.setDataValidade("09/03/2024");
         pagamentoCartao.setCodigoSeguranca(777);
         pagamentoCartao.setValor(42.00);
+        pagamentoCartao.setData(LocalDate.now().toString());
         pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
         PagamentoPix pagamentoPix = new PagamentoPix();
@@ -94,7 +108,11 @@ public class Main {
         pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
         pagamentoPix.setInstituicaoFinanceira("Itáu");
         pagamentoPix.setValor(42.00);
-        pagamentoPix.setData("15/04;2023");
+        pagamentoPix.setData(LocalDate.now().toString());
         pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
+
+        ArrayList<Pagamento> pagamentos = new ArrayList<>();
+        pagamentos.add(pagamentoCartao);
+        pagamentos.add(pagamentoPix);
     }
 }

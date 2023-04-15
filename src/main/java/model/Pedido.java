@@ -7,12 +7,12 @@ public class Pedido {
     private Cliente cliente;
     private ArrayList<Livro> livro;
     private Double valorTotal;
-    private Date data;
+    private String data;
 
     public Pedido() {
     }
 
-    public Pedido(Cliente cliente, ArrayList<Livro> livro, Double valorTotal, Date data) {
+    public Pedido(Cliente cliente, ArrayList<Livro> livro, Double valorTotal, String data) {
         this.cliente = cliente;
         this.livro = livro;
         this.valorTotal = valorTotal;
@@ -39,11 +39,11 @@ public class Pedido {
 
     public void setValorTotal(Double valorTotal) { this.valorTotal = valorTotal; }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
