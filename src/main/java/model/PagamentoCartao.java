@@ -5,10 +5,14 @@ import java.util.Date;
 public class PagamentoCartao extends Pagamento {
     private String nmCartao;
     private String nomeTitular;
-    private Date dataValidade;
+    private String dataValidade;
     private Integer codigoSeguranca;
+    
+    public PagamentoCartao(){
+        
+    }
 
-    public PagamentoCartao(double valor, Date data, StatusPagamento status, String nmCartao, String nomeTitular, Date dataValidade, Integer codigoSeguranca) {
+    public PagamentoCartao(double valor, String data, StatusPagamento status, String nmCartao, String nomeTitular, String dataValidade, Integer codigoSeguranca) {
         super(valor, data, status);
         this.nmCartao = nmCartao;
         this.nomeTitular = nomeTitular;
@@ -32,11 +36,11 @@ public class PagamentoCartao extends Pagamento {
         this.nomeTitular = nomeTitular;
     }
 
-    public Date getDataValidade() {
+    public String getDataValidade() {
         return dataValidade;
     }
 
-    public void setDataValidade(Date dataValidade) {
+    public void setDataValidade(String dataValidade) {
         this.dataValidade = dataValidade;
     }
 

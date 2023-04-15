@@ -9,7 +9,7 @@ public class PagamentoPix extends Pagamento {
 
     public PagamentoPix() {}
 
-    public PagamentoPix(double valor, Date data, StatusPagamento statusPagamento, String chavePix, TipoChavePix tipoChavePix, String instituicaoFinanceira) {
+    public PagamentoPix(double valor, String data, StatusPagamento statusPagamento, String chavePix, TipoChavePix tipoChavePix, String instituicaoFinanceira) {
         super(valor, data, statusPagamento);
         this.chavePix = chavePix;
         this.tipoChavePix = tipoChavePix;
