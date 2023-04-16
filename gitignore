@@ -1,14 +1,15 @@
-# Arquivos gerados pelo Maven
+# Compiled class file
 target/
 
-# Arquivos de configuração do Eclipse
-.classpath
-.project
-.settings/
+# Compiled source file
+*.class
 
-# Logs do sistema
+# Maven specific files/folders
 log/
-*.log
-
-# Arquivos de backup
-*~
+log4j.properties
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+mvnw
+mvnw.cmd
