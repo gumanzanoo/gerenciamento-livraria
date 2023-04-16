@@ -72,15 +72,15 @@ public class Main {
 
         ItemPedido item1 = new ItemPedido();
         item1.setLivro(livro1);
-        item1.setVlUn(14.00);
-        item1.setQtdItem(2);
+        item1.setVlUn(livro1.getPrecoVenda());
+        item1.setQtdItem(1);
         item1.atribuirDesconto(2);
 
         ItemPedido item2 = new ItemPedido();
         item2.setLivro(livro2);
-        item2.setVlUn(14.00);
+        item2.setVlUn(livro2.getPrecoVenda());
         item2.setQtdItem(2);
-        item2.atribuirDesconto(2);
+        item2.atribuirDesconto(0);
 
         ArrayList<ItemPedido> itensPedido = new ArrayList<>();
         itensPedido.add(item1);
@@ -96,7 +96,7 @@ public class Main {
         pagamentoCartao.setNomeTitular("Pedro Augusto");
         pagamentoCartao.setDataValidade("09/03/2024");
         pagamentoCartao.setCodigoSeguranca(777);
-        pagamentoCartao.setValor(19.00);
+        pagamentoCartao.setValor(22.00);
         pagamentoCartao.setData(currentDateTime);
         pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
@@ -104,7 +104,7 @@ public class Main {
         pagamentoPix.setChavePix("64.322.292/0001-61");
         pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
         pagamentoPix.setInstituicaoFinanceira("Itáu");
-        pagamentoPix.setValor(19.00);
+        pagamentoPix.setValor(22.00);
         pagamentoPix.setData(currentDateTime);
         pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
 

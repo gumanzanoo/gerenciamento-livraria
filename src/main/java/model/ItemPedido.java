@@ -58,7 +58,8 @@ public class ItemPedido {
     }
 
     public void atribuirDesconto(double desconto) {
-        this.vlTotal = (this.vlUn - desconto * this.qtdItem);
+        this.vlDesconto = desconto;
+        this.vlTotal = (this.vlUn - this.vlDesconto) * this.qtdItem;
     }
 
     @Override
