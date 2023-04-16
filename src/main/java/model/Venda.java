@@ -6,7 +6,7 @@ public class Venda {
     private Cliente cliente;
     private Pedido pedido;
     private ArrayList<Pagamento> pagamentos;
-    private Double valorTotal;
+    private double valorTotal;
     private String data;
     private StatusVenda statusVenda;
 
@@ -14,7 +14,7 @@ public class Venda {
     }
 
     public Venda(Cliente cliente, Pedido pedido, ArrayList<Pagamento> pagamentos,
-                 Double valorTotal, String data, StatusVenda statusVenda) {
+                 double valorTotal, String data, StatusVenda statusVenda) {
         this.cliente = cliente;
         this.pedido = pedido;
         this.pagamentos = pagamentos;
@@ -50,10 +50,6 @@ public class Venda {
         this.pagamentos = pagamentos;
     }
 
-    public Double getValorTotal() { return valorTotal; }
-
-    public void setValorTotal(Double valorTotal) { this.valorTotal = valorTotal; }
-
     public String getData() {
         return data;
     }
@@ -66,17 +62,19 @@ public class Venda {
 
     public void setStatusVenda(StatusVenda statusVenda) { this.statusVenda = statusVenda; }
 
-    public void setValorTotal(ArrayList<Livro> livros) {
+    public double getValorTotal() { return valorTotal; }
+
+    public void setValorTotal(ArrayList<ItemPedido> itensPedido) {
         double valorTotal = 0;
-        for(Livro livro : livros ) {
-            valorTotal += livro.getPrecoVenda();
+        for(ItemPedido itemPedido : itensPedido ) {
+            valorTotal += itemPedido.getVlTotal();
         }
         this.valorTotal = valorTotal;
     }
 
     public void processaPagamento(ArrayList<Pagamento> pagamentos) {
-        Double valorTotal = this.valorTotal;
-        Double valorPago = 0.00;
+        double valorTotal = this.valorTotal;
+        double valorPago = 0.00;
 
         for (Pagamento pagamento: pagamentos) {
             valorPago += pagamento.getValor();
@@ -85,7 +83,7 @@ public class Venda {
         StatusPagamento statusPagamento;
         StatusVenda statusVenda;
 
-        if (valorPago.equals(valorTotal)) {
+        if (valorPago == valorTotal) {
             statusPagamento = StatusPagamento.APROVADO;
             statusVenda = StatusVenda.CONCLUIDA;
 
@@ -105,9 +103,13 @@ public class Venda {
         this.statusVenda = statusVenda;
     }
 
-    public void atribuirDesconto(Livro livro, Double valorDesconto) {
+    public void atribuirDesconto(Livro livro, double valorDesconto) {
         livro.setPrecoVenda(livro.getPrecoVenda() - valorDesconto);
 
+    }
+
+    public void atualizarEstoque(Livro livro, int qtd) {
+        livro.setQtdEstoque(livro.getQtdEstoque() - qtd);
     }
 
     @Override

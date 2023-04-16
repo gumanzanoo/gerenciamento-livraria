@@ -2,7 +2,6 @@ package livraria;
 
 import model.*;
 
-import javax.swing.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -61,26 +60,35 @@ public class Main {
         livro1.setGeneroLiterario(generoLiterario);
         livro1.setEditora(editora);
 
-        Livro livro2 = livro1;
+        Livro livro2 = new Livro();
+        livro2.setTitulo("O Alienista");
+        livro2.setNmPaginas(100);
+        livro2.setQtdEstoque(12);
+        livro2.setPrecoVenda(16.00);
+        livro2.setDataLancamento("15/03/1882");
+        livro2.setAutor(autor);
+        livro2.setGeneroLiterario(generoLiterario);
+        livro2.setEditora(editora);
 
-        Livro livro3 = new Livro();
-        livro3.setTitulo("O Alienista");
-        livro3.setNmPaginas(100);
-        livro3.setQtdEstoque(12);
-        livro3.setPrecoVenda(16.00);
-        livro3.setDataLancamento("15/03/1882");
-        livro3.setAutor(autor);
-        livro3.setGeneroLiterario(generoLiterario);
-        livro3.setEditora(editora);
+        ItemPedido item1 = new ItemPedido();
+        item1.setLivro(livro1);
+        item1.setVlUn(14.00);
+        item1.setQtdItem(2);
+        item1.atribuirDesconto(2);
 
-        ArrayList<Livro> livros = new ArrayList<>();
-        livros.add(livro1);
-        livros.add(livro2);
-        livros.add(livro3);
+        ItemPedido item2 = new ItemPedido();
+        item2.setLivro(livro2);
+        item2.setVlUn(14.00);
+        item2.setQtdItem(2);
+        item2.atribuirDesconto(2);
+
+        ArrayList<ItemPedido> itensPedido = new ArrayList<>();
+        itensPedido.add(item1);
+        itensPedido.add(item2);
         
         Pedido pedido = new Pedido();
         pedido.setCliente(cliente);
-        pedido.setLivro(livros);
+        pedido.setItensPedido(itensPedido);
         pedido.setData(currentDateTime);
 
         PagamentoCartao pagamentoCartao = new PagamentoCartao();
@@ -105,14 +113,14 @@ public class Main {
         pagamentos.add(pagamentoPix);
 
         Venda venda = new Venda();
-        venda.atribuirDesconto(pedido.getLivro().get(0), 1.00);
-        venda.atribuirDesconto(pedido.getLivro().get(1), 2.00);
-        venda.setValorTotal(livros);
+        venda.setValorTotal(itensPedido);
         venda.setPedido(pedido);
         venda.setPagamentos(pagamentos);
         venda.setCliente(cliente);
         venda.setData(currentDateTime);
         venda.processaPagamento(pagamentos);
+        venda.atualizarEstoque(livro1, 2);
+        venda.atualizarEstoque(livro2, 1);
 
         System.out.println(venda.toString());
     }

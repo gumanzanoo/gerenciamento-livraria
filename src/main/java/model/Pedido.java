@@ -1,19 +1,18 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Pedido {
     private Cliente cliente;
-    private ArrayList<Livro> livros;
+    private ArrayList<ItemPedido> itensPedido;
     private String data;
 
     public Pedido() {
     }
 
-    public Pedido(Cliente cliente, ArrayList<Livro> livros, String data) {
+    public Pedido(Cliente cliente, ArrayList<ItemPedido> itensPedido, String data) {
         this.cliente = cliente;
-        this.livros = livros;
+        this.itensPedido = itensPedido;
         this.data = data;
     }
 
@@ -25,12 +24,12 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public ArrayList<Livro> getLivro() {
-        return livros;
+    public ArrayList<ItemPedido> getItensPedido() {
+        return itensPedido;
     }
 
-    public void setLivro(ArrayList<Livro> livro) {
-        this.livros = livro;
+    public void setItensPedido(ArrayList<ItemPedido> itensPedido) {
+        this.itensPedido = itensPedido;
     }
 
     public String getData() {
@@ -44,7 +43,7 @@ public class Pedido {
     @Override
     public String toString() {
         return '\n' + "Cliente: " + cliente.getNome() + '\n' +
-               "Livros: " + livros + '\n' +
+               "Livros: " + itensPedido + '\n' +
                "Data: " + data + '\n';
     }
 }
