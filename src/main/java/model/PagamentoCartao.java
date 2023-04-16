@@ -53,11 +53,10 @@ public class PagamentoCartao extends Pagamento {
 
     @Override
     public String toString() {
-        return "PagamentoCartao{" +
-                "nmCartao='" + nmCartao + '\'' +
-                ", nomeTitular='" + nomeTitular + '\'' +
-                ", dataValidade=" + dataValidade +
-                ", codigoSeguranca='" + codigoSeguranca + '\'' +
-                '}';
+        return  '\n' + "Cartão: " + '\n' +
+               "Numero do Cartão: " + nmCartao + '\n' +
+               "Nome do Titular: " + nomeTitular + '\n' +
+               "Data de Validade: " + dataValidade + '\n' +
+               "Codigo de Segurança: " + codigoSeguranca + '\n';
     }
 }

@@ -59,8 +59,8 @@ public class Cliente {
     @Override
     public String toString() {
         return "Nome: " + getNome() + '\n' +
-                "Email: " + getEmail() + '\n' +
-                "Telefone: " + getTelefone() + '\n' +
-                '\n' + "Endereco: " + '\n' + getEndereco();
+               "Email: " + getEmail() + '\n' +
+               "Telefone: " + getTelefone() + '\n' +
+               "Endereco: " + '\n' + getEndereco();
     }
 }

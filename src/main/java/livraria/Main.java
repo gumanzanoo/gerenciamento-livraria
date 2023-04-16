@@ -2,11 +2,14 @@ package livraria;
 
 import model.*;
 
+import javax.swing.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        String currentDateTime = LocalDate.now().toString();
+
         Endereco enderecoCliente = new Endereco();
         enderecoCliente.setNumero(3592);
         enderecoCliente.setRua("Almirante Barroso");
@@ -44,7 +47,7 @@ public class Main {
         autor.setNacionalidade("Brasileiro");
 
         Editora editora = new Editora();
-        editora.setRazaoSocial("Editora Cambaia");
+        editora.setNome("Editora Cambaia");
         editora.setCnpj("19.868.501/0001-12");
         editora.setEndereco(enderecoEditora);
 
@@ -86,7 +89,7 @@ public class Main {
         Pedido pedido = new Pedido();
         pedido.setCliente(cliente);
         pedido.setLivro(livros);
-        pedido.setData(LocalDate.now().toString());
+        pedido.setData(currentDateTime);
         pedido.setValorTotal(livros);
 
         PagamentoCartao pagamentoCartao = new PagamentoCartao();
@@ -95,7 +98,7 @@ public class Main {
         pagamentoCartao.setDataValidade("09/03/2024");
         pagamentoCartao.setCodigoSeguranca(777);
         pagamentoCartao.setValor(42.00);
-        pagamentoCartao.setData(LocalDate.now().toString());
+        pagamentoCartao.setData(currentDateTime);
         pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
         PagamentoPix pagamentoPix = new PagamentoPix();
@@ -103,11 +106,19 @@ public class Main {
         pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
         pagamentoPix.setInstituicaoFinanceira("Itáu");
         pagamentoPix.setValor(42.00);
-        pagamentoPix.setData(LocalDate.now().toString());
+        pagamentoPix.setData(currentDateTime);
         pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
 
         ArrayList<Pagamento> pagamentos = new ArrayList<>();
         pagamentos.add(pagamentoCartao);
         pagamentos.add(pagamentoPix);
+
+        Venda venda = new Venda();
+        venda.setPedido(pedido);
+        venda.setPagamento(pagamentos);
+        venda.setCliente(cliente);
+        venda.setData(currentDateTime);
+
+        System.out.println(venda.toString());
     }
 }

@@ -41,11 +41,10 @@ public class PagamentoPix extends Pagamento {
 
     @Override
     public String toString() {
-        return "PagamentoPix{" +
-                "chavePix='" + chavePix + '\'' +
-                ", tipoChavePix=" + tipoChavePix +
-                ", instituicaoFinanceira='" + instituicaoFinanceira + '\'' +
-                '}';
+        return '\n' + "PIX: " + '\n' +
+               "Tipo: " + tipoChavePix + '\n' +
+               "Chave Pix: " + chavePix + '\n' +
+               "Instituição Financeira: " + instituicaoFinanceira + '\n';
     }
 }
 

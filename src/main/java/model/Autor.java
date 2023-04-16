@@ -61,12 +61,10 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor{" +
-                "nome='" + nome + '\'' +
-                ", dtNascimento=" + dtNascimento +
-                ", dtFalecimento=" + dtFalecimento +
-                ", nacionalidade='" + nacionalidade + '\'' +
-                ", generoLiterario=" + generoLiterario +
-                '}';
+        return "Nome: " + nome + '\n' +
+               "Data de Nascimento: " + dtNascimento + '\n' +
+               "Data de Falecimento: " + dtFalecimento + '\n' +
+               "Nacionalidade: " + nacionalidade + '\n' +
+               '\n' + "Genero Literario: " + generoLiterario + '\n';
     }
 }

@@ -5,16 +5,16 @@ import java.util.Date;
 
 public class Pedido {
     private Cliente cliente;
-    private ArrayList<Livro> livro;
+    private ArrayList<Livro> livros;
     private Double valorTotal;
     private String data;
 
     public Pedido() {
     }
 
-    public Pedido(Cliente cliente, ArrayList<Livro> livro, Double valorTotal, String data) {
+    public Pedido(Cliente cliente, ArrayList<Livro> livros, Double valorTotal, String data) {
         this.cliente = cliente;
-        this.livro = livro;
+        this.livros = livros;
         this.valorTotal = valorTotal;
         this.data = data;
     }
@@ -28,11 +28,11 @@ public class Pedido {
     }
 
     public ArrayList<Livro> getLivro() {
-        return livro;
+        return livros;
     }
 
     public void setLivro(ArrayList<Livro> livro) {
-        this.livro = livro;
+        this.livros = livro;
     }
 
     public Double getValorTotal() { return valorTotal; }    
@@ -55,11 +55,9 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" +
-                "cliente=" + cliente +
-                ", livro=" + livro +
-                ", valorTotal=" + valorTotal +
-                ", data=" + data +
-                '}';
+        return '\n' + "Cliente: " + cliente.getNome() + '\n' +
+               "Livros: " + livros + '\n' +
+               "ValorTotal: " + valorTotal + '\n' +
+               "Data: " + data + '\n';
     }
 }

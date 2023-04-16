@@ -13,12 +13,12 @@ public class Editora {
         this.endereco = endereco;
     }
 
-    public String getRazaoSocial() {
+    public String getNome() {
         return nome;
     }
 
-    public void setRazaoSocial(String razaoSocial) {
-        this.nome = razaoSocial;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCnpj() {
@@ -39,10 +39,8 @@ public class Editora {
 
     @Override
     public String toString() {
-        return "Editora{" +
-                "razaoSocial='" + nome + '\'' +
-                ", cnpj='" + cnpj + '\'' +
-                ", endereco=" + endereco +
-                '}';
+        return "Nome: " + nome + '\n' +
+               "CNPJ: " + cnpj + '\n' +
+               '\n' +"Endereco: " + endereco + '\n';
     }
 }

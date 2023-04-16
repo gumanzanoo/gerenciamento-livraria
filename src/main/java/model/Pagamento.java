@@ -41,10 +41,8 @@ public abstract class Pagamento {
     
     @Override
     public String toString() {
-        return "Pagamento{" +
-                "valor=" + valor +
-                ", data=" + data +
-                ", statusPagamento=" + statusPagamento +
-                '}';
+        return "Valor: " + valor + '\n' +
+               "Data: " + data + '\n' +
+               '\n' + "Status Pagamento: " + statusPagamento + '\n';
     }
 }

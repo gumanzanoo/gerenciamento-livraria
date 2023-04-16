@@ -88,15 +88,13 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", nmPaginas=" + nmPaginas +
-                ", qtdEstoque=" + qtdEstoque +
-                ", precoVenda=" + precoVenda +
-                ", dataLancamento='" + dataLancamento + '\'' +
-                ", autor=" + autor +
-                ", editora=" + editora +
-                ", generoLiterario=" + generoLiterario +
-                '}';
+        return '\n' + "Titulo: " + titulo + '\n' +
+               "Nome Paginas: " + nmPaginas + '\n' +
+               "Quantidade Estoque: " + qtdEstoque + '\n' +
+               "Preco Venda: " + precoVenda + '\n' +
+               "Date de Lançamento: " + dataLancamento + '\n' +
+               "Autor: " + autor.getNome() + '\n' +
+               "Editora: " + editora.getNome() + '\n' +
+               "Genero Literario: " + generoLiterario.getTitulo() + '\n';
     }
 }

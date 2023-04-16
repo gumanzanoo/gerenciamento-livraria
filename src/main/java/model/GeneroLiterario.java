@@ -29,9 +29,7 @@ public class GeneroLiterario {
 
     @Override
     public String toString() {
-        return "GeneroLiterario{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                '}';
+        return "Titulo: " + titulo + '\'' +
+               "Descricao: " + descricao + '\'' ;
     }
 }

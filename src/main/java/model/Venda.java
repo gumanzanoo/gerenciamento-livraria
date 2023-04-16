@@ -53,11 +53,9 @@ public class Venda {
 
     @Override
     public String toString() {
-        return "Venda{" +
-                "cliente=" + cliente +
-                ", pedido=" + pedido +
-                ", pagamento=" + pagamento +
-                ", data='" + data + '\'' +
-                '}';
+        return "Cliente: " + cliente + '\n' +
+               "Pedido: " + pedido + '\n' +
+               "Pagamento: " + pagamento + '\n' +
+               "Data: " + data + '\n';
     }
 }
