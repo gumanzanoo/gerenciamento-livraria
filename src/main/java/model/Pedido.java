@@ -6,16 +6,14 @@ import java.util.Date;
 public class Pedido {
     private Cliente cliente;
     private ArrayList<Livro> livros;
-    private Double valorTotal;
     private String data;
 
     public Pedido() {
     }
 
-    public Pedido(Cliente cliente, ArrayList<Livro> livros, Double valorTotal, String data) {
+    public Pedido(Cliente cliente, ArrayList<Livro> livros, String data) {
         this.cliente = cliente;
         this.livros = livros;
-        this.valorTotal = valorTotal;
         this.data = data;
     }
 
@@ -35,16 +33,6 @@ public class Pedido {
         this.livros = livro;
     }
 
-    public Double getValorTotal() { return valorTotal; }    
-    
-    public void setValorTotal(ArrayList<Livro> livros) { 
-        double valorTotal = 0;
-        for(Livro livro : livros ) {
-            valorTotal += livro.getPrecoVenda();    
-        }
-        this.valorTotal = valorTotal;
-    }
-
     public String getData() {
         return data;
     }
@@ -57,7 +45,6 @@ public class Pedido {
     public String toString() {
         return '\n' + "Cliente: " + cliente.getNome() + '\n' +
                "Livros: " + livros + '\n' +
-               "ValorTotal: " + valorTotal + '\n' +
                "Data: " + data + '\n';
     }
 }

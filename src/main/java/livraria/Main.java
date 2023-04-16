@@ -90,14 +90,13 @@ public class Main {
         pedido.setCliente(cliente);
         pedido.setLivro(livros);
         pedido.setData(currentDateTime);
-        pedido.setValorTotal(livros);
 
         PagamentoCartao pagamentoCartao = new PagamentoCartao();
         pagamentoCartao.setNmCartao("2548-1154-1418-5485");
         pagamentoCartao.setNomeTitular("Pedro Augusto");
         pagamentoCartao.setDataValidade("09/03/2024");
         pagamentoCartao.setCodigoSeguranca(777);
-        pagamentoCartao.setValor(42.00);
+        pagamentoCartao.setValor(21.00);
         pagamentoCartao.setData(currentDateTime);
         pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
@@ -105,7 +104,7 @@ public class Main {
         pagamentoPix.setChavePix("64.322.292/0001-61");
         pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
         pagamentoPix.setInstituicaoFinanceira("Itáu");
-        pagamentoPix.setValor(42.00);
+        pagamentoPix.setValor(21.00);
         pagamentoPix.setData(currentDateTime);
         pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
 
@@ -115,10 +114,12 @@ public class Main {
 
         Venda venda = new Venda();
         venda.setPedido(pedido);
-        venda.setPagamento(pagamentos);
+        venda.setPagamentos(pagamentos);
+        venda.setValorTotal(livros);
         venda.setCliente(cliente);
         venda.setData(currentDateTime);
-
+        venda.processaPagamento(pagamentos);
+        
         System.out.println(venda.toString());
     }
 }
