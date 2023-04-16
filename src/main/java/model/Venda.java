@@ -75,7 +75,7 @@ public class Venda {
     }
 
     public void processaPagamento(ArrayList<Pagamento> pagamentos) {
-        Double valorTotal = this.getValorTotal();
+        Double valorTotal = this.valorTotal;
         Double valorPago = 0.00;
 
         for (Pagamento pagamento: pagamentos) {
@@ -105,7 +105,10 @@ public class Venda {
         this.statusVenda = statusVenda;
     }
 
+    public void atribuirDesconto(Livro livro, Double valorDesconto) {
+        livro.setPrecoVenda(livro.getPrecoVenda() - valorDesconto);
 
+    }
 
     @Override
     public String toString() {

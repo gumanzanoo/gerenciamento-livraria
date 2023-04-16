@@ -61,15 +61,7 @@ public class Main {
         livro1.setGeneroLiterario(generoLiterario);
         livro1.setEditora(editora);
 
-        Livro livro2 = new Livro();
-        livro2.setTitulo("Dom Casmurro");
-        livro2.setNmPaginas(210);
-        livro2.setQtdEstoque(9);
-        livro2.setPrecoVenda(12.00);
-        livro2.setDataLancamento("01/01/1899");
-        livro2.setAutor(autor);
-        livro2.setGeneroLiterario(generoLiterario);
-        livro2.setEditora(editora);
+        Livro livro2 = livro1;
 
         Livro livro3 = new Livro();
         livro3.setTitulo("O Alienista");
@@ -96,7 +88,7 @@ public class Main {
         pagamentoCartao.setNomeTitular("Pedro Augusto");
         pagamentoCartao.setDataValidade("09/03/2024");
         pagamentoCartao.setCodigoSeguranca(777);
-        pagamentoCartao.setValor(21.00);
+        pagamentoCartao.setValor(19.00);
         pagamentoCartao.setData(currentDateTime);
         pagamentoCartao.setStatusPagamento(StatusPagamento.PENDENTE);
 
@@ -104,7 +96,7 @@ public class Main {
         pagamentoPix.setChavePix("64.322.292/0001-61");
         pagamentoPix.setTipoChavePix(TipoChavePix.CNPJ);
         pagamentoPix.setInstituicaoFinanceira("Itáu");
-        pagamentoPix.setValor(21.00);
+        pagamentoPix.setValor(19.00);
         pagamentoPix.setData(currentDateTime);
         pagamentoPix.setStatusPagamento(StatusPagamento.PENDENTE);
 
@@ -113,13 +105,15 @@ public class Main {
         pagamentos.add(pagamentoPix);
 
         Venda venda = new Venda();
+        venda.atribuirDesconto(pedido.getLivro().get(0), 1.00);
+        venda.atribuirDesconto(pedido.getLivro().get(1), 2.00);
+        venda.setValorTotal(livros);
         venda.setPedido(pedido);
         venda.setPagamentos(pagamentos);
-        venda.setValorTotal(livros);
         venda.setCliente(cliente);
         venda.setData(currentDateTime);
         venda.processaPagamento(pagamentos);
-        
+
         System.out.println(venda.toString());
     }
 }
